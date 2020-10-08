@@ -2,20 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CoinScript : MonoBehaviour
-{
-    void Start()
-    {
-        
-    }
+public class CoinScript : MonoBehaviour {
+  void Start () {
 
-    void Update()
-    {
-        
-    }
+  }
 
-    void OnTriggerEnter2D (Collider2D col)
-    {
-        Destroy (gameObject);
-    }
+  void Update () {
+
+  }
+
+  void OnTriggerEnter2D (Collider2D col) {
+    Scorekeeper.Instance.AddScore ();
+    Destroy (gameObject);
+  }
 }
